@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;800&display=swap");
+
+body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-family: "Poppins", serif;
+    background: #eeaeca;
+    background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
+    margin: 0;
+    height: 100vh;
+}
+
+#main-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#profile-container {
+    width: 220px;
+    height: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#profile-container h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#profile-container button {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 80%;
+    max-width: 200px;
+    padding: 10px;
+    margin: 10px auto;
+    background: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#profile-container button i {
+    margin-right: 8px;
+}
+
+#profile-container button:hover {
+    background: #8a1db4;
+}
+
+#content-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+#calendar-nav {
+    margin-bottom: 20px;
+}
+
+#calendar-nav button {
+    background: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    margin: 0 5px;
+}
+
+#calendar-nav button:hover {
+    background: #8a1db4;
+}
+
+h1 {
+    font-weight: 800;
+    margin: 1rem 0;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 800px;
+}
+
+ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    padding: 0.5rem;
+    font-weight: 300;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+}
+
+ul#calendar-weekdays li {
+    font-weight: 500;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+ul li time {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+ul .today {
+    background: #ffffff70;
+}
+
+ul .today time {
+    font-weight: 800;
+}
+
+/* Modal CSS */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: 500;
+}
+
+form input, form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form button {
+    background: #3498db;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #8a1db4;
+}
+
+#scheduled-list {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+#scheduled-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#scheduled-list li button {
+    background: #e74c3c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#scheduled-list li button:hover {
+    background: #c0392b;
+}
+
+/* Estilo para compromissos agendados */
+#scheduled-list li {
+    display: flex; /* Define que os elementos internos serão exibidos em linha */
+    justify-content: space-between; /* Espaçamento entre os elementos internos */
+    align-items: center; /* Alinha os elementos internamente ao centro */
+    background: rgba(255, 255, 255, 0.5); /* Fundo semi-transparente */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-bottom: 10px; /* Espaçamento entre os itens */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+#scheduled-list li span {
+    display: block; /* Exibe os elementos em bloco */
+    margin-right: 10px; /* Espaçamento à direita */
+    line-height: 1.5; /* Altura da linha para espaçamento entre as linhas */
+}
+
+#scheduled-list li span .label {
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+#scheduled-list li button {
+    background: #e74c3c; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    padding: 5px 10px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Cursor do botão */
+    transition: background 0.3s; /* Transição suave para a cor de fundo */
+}
+
+#scheduled-list li button:hover {
+    background: #c0392b; /* Cor de fundo do botão quando em hover */
+}
+
+/* Estilo para dias agendados */
+ul li.scheduled {
+    background: #3498db; /* Cor de fundo dos dias agendados */
+    color: #ffffff; /* Cor do texto dos dias agendados */
+}

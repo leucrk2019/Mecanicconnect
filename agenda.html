@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/agenda.css">
+    <title>Agenda</title>
+</head>
+<body>
+    <div id="main-container">
+        <div id="profile-container">
+            <h2>Painel</h2>
+            <button id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</button>
+            <button id="clients"><i class="fas fa-users"></i> Clientes</button>
+            <button id="register-client"><i class="fas fa-user-plus"></i> Cadastrar Clientes</button>
+        </div>
+        <div id="content-container">
+            <h1 id="month-year"></h1>
+            <div id="calendar-nav">
+                <button id="prev-month"><i class="fas fa-chevron-left"></i></button>
+                <button id="next-month"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <ul id="calendar-weekdays">
+                <li>Segunda</li>
+                <li>Terça</li>
+                <li>Quarta</li>
+                <li>Quinta</li>
+                <li>Sexta</li>
+                <li>Sábado</li>
+                <li>Domingo</li>
+            </ul>
+            <ul id="calendar-days">
+                <!-- Os dias serão inseridos via JavaScript -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal de Agendamento -->
+    <div id="schedule-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Agendar Compromisso</h2>
+            <form id="schedule-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="time">Hora:</label>
+                <input type="time" id="time" name="time" required>
+                <label for="reason">Motivo:</label>
+                <input type="text" id="reason" name="reason" required>
+                <button type="submit">Agendar</button>
+            </form>
+            <h3>Compromissos Agendados</h3>
+            <ul id="scheduled-list">
+                <!-- Compromissos serão adicionados aqui -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/agenda.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/clientes.css">
+    <title>Clientes</title>
+</head>
+<body>
+    <div id="profile-container">
+        <h2>Painel</h2>
+        <button id="agenda"><i class="fas fa-calendar-alt"></i> Agenda</button>
+        <button id="clients"><i class="fas fa-users"></i> Clientes</button>
+        <button id="register-client"><i class="fas fa-user-plus"></i> Cadastrar Clientes</button>
+    </div>
+    <div id="content">
+        <h2>Clientes Cadastrados</h2>
+        <div id="clients-list"></div>
+    </div>
+    <div id="client-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Detalhes do Cliente</h2>
+            <p><strong>Nome:</strong> <span id="client-name"></span></p>
+            <p><strong>CPF:</strong> <span id="client-cpf"></span></p>
+            <p><strong>Telefone:</strong> <span id="client-phone"></span></p>
+            <p><strong>Email:</strong> <span id="client-email"></span></p>
+            <p><strong>CEP:</strong> <span id="client-cep"></span></p>
+            <p><strong>Cidade:</strong> <span id="client-city"></span></p>
+            <p><strong>Estado:</strong> <span id="client-state"></span></p>
+            <p><strong>Endereço:</strong> <span id="client-address"></span></p>
+            <p><strong>Número da Casa:</strong> <span id="client-houseNumber"></span></p>
+            <p><strong>Complemento:</strong> <span id="client-complement"></span></p>
+            <p><strong>Placa do Carro:</strong> <span id="client-carPlate"></span></p>
+            <button id="delete-client">Apagar Cliente</button>
+        </div>
+    </div>
+    <script src="js/clientes.js"></script>
+</body>
+</html>

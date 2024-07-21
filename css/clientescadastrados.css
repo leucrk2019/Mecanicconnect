@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    height: 100vh;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    font-family: Arial, sans-serif;
+}
+
+#profile-container {
+    width: 100%;
+    max-width: 220px;
+    height: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#profile-container button {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 80%;
+    max-width: 200px;
+    padding: 10px;
+    margin: 10px auto;
+    background: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#profile-container button:hover {
+    background: #8a1db4;
+}
+
+#content {
+    margin-left: 40px;
+    padding: 20px;
+    width: calc(100% - 40px);
+}
+
+h2 {
+    color: #ffffff;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    background: #3498db;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: background 0.3s;
+}
+
+.tab:hover, .tab.active {
+    background: #8a1db4;
+}
+
+.form-section {
+    display: none;
+}
+
+.form-section.active {
+    display: grid;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    color: #ffffff;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+button[type="button"], button[type="submit"] {
+    background: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="button"]:hover, button[type="submit"]:hover {
+    background: #8a1db4;
+}
