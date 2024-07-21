@@ -1,0 +1,36 @@
+/* Adicione isso ao seu arquivo CSS existente */
+
+.modal-content h2, .modal-content h3 {
+    margin-top: 0;
+}
+
+#financial-form label, #financial-form select, #financial-form input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
+
+#financial-form button {
+    width: 100%;
+    background: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#financial-form button:hover {
+    background: #8a1db4;
+}
+
+#financial-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
