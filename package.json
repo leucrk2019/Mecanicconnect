@@ -1,6 +1,6 @@
 {
   "name": "mecanica-connect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Aplicativo Mecânica Connect",
   "main": "main.js",
   "scripts": {
@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "electron": "^13.1.7",
-    "electron-builder": "^22.11.7"
+    "electron-builder": "^22.11.7",
+    "electron-packager": "^17.1.2"
   }
 }
